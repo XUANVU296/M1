@@ -33,9 +33,8 @@
                 </th>
                 <th>
                     <input type="button" onclick="khoi_xu_li()" value="Convert"></input>
+                </th>
         </table>
-        </th>
-        </tr>
         <script>
             function khoi_xu_li() {
                 let money = document.getElementById('money').value;
@@ -43,9 +42,9 @@
                 let den = document.getElementById('den').value;
                 let kQ
                 if (tu == 'VND' && den == 'USD') {
-                    kQ = "kQ:" + (money * 23000)
+                    kQ = "kQ:" + (money * 23000)+" USD"
                 } else {
-                    kQ = "kQ:"(money / 23000)
+                    kQ = "kQ:"(money / 23000)+" VND"
                 }
                 document.write(kQ)
             }
