@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td><input type="text" id="money" value=""></td>
+                <th>
+                    <select id="tu">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </th>
+                <th>
+                    <select id="den">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </th>
+                <th>
+                    <input type="button" onclick="khoi_xu_li()" value="Convert"></input>
+        </table>
+        </th>
+        </tr>
+        <script>
+            function khoi_xu_li() {
+                let money = document.getElementById('money').value;
+                let tu = document.getElementById('tu').value;
+                let den = document.getElementById('den').value;
+                let kQ
+                if (tu == 'VND' && den == 'USD') {
+                    kQ = "kQ:" + (money * 23000)
+                } else {
+                    kQ = "kQ:"(money / 23000)
+                }
+                document.write(kQ)
+            }
+        </script>
+    </form>
+
+</html>
