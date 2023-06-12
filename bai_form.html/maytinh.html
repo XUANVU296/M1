@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2"><input type="text" id="number1" value=""></td>
+                <td colspan="2"><input type="text" id="number2" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="tinhcong()" value="Addition(+)"></input></td>
+                <td><input type="button" onclick="tinhtru()" value="Subtraction(-)"></input></td>
+                <td><input type="button" onclick="tinhnhan()" value="Multiplication(*)"></input></td>
+                <td><input type="button" onclick="tinhchia()" value="Division(/)"></input></td>
+            </tr>
+        </table>
+        <p id="kQ"></p>
+        <script>
+            function tinhcong() {
+                let number1 = document.getElementById('number1').value;
+                let number2 = document.getElementById('number2').value;
+                number1 = parseInt(number1)
+                number2 = parseInt(number2)
+                let kQ = number1 + number2
+                document.getElementById('kQ').innerHTML = 'kết quả là: ' + kQ;
+            }
+
+            function tinhtru() {
+                let number1 = document.getElementById('number1').value;
+                let number2 = document.getElementById('number2').value;
+                number1 = parseInt(number1)
+                number2 = parseInt(number2)
+                let kQ =number1-number2
+                document.getElementById('kQ').innerHTML ='kết quả là: ' +kQ;
+            }
+
+            function tinhnhan() {
+                let number1 = document.getElementById('number1').value;
+                let number2 = document.getElementById('number2').value;
+                number1 = parseInt(number1)
+                number2 = parseInt(number2)
+                let kQ = number1*number2
+                document.getElementById('kQ').innerHTML ='kết quả là: ' +kQ;
+            }
+
+            function tinhchia() {
+                let number1 = document.getElementById('number1').value;
+                let number2 = document.getElementById('number2').value;
+                number1 = parseInt(number1)
+                number2 = parseInt(number2)
+                let kQ = number1/number2
+                document.getElementById('kQ').innerHTML ='kết quả là: ' +kQ;
+            }
+        </script>
+    </form>
+</body>
+
+</html>
