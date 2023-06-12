@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+       let a = parseFloat(prompt("nhập a"))
+       let b = parseFloat(prompt("nhập b"))
+       let c = parseFloat(prompt("nhập c"))
+       let average = (a+ b+ c)/3
+        alert("giá trị trung bình của a, b, c là: " + average)
+    </script> -->
+    <!-- <script>
+        var a = parseFloat(prompt('nhập số A'))
+        var b = parseFloat(prompt('nhập số B'))
+        var c = parseFloat(prompt('nhập số C'))
+        if (a > b && a > c) {
+            alert('A là số lớn nhất')
+        } else {
+            if (b >c) {
+                alert('B là số lớn nhất')
+            } else {
+                alert('C là số lớn nhất')
+            }
+        }
+    </script> -->
+    <!-- <script>
+        let a = parseFloat(prompt('nhập số A'))
+        let b = a % 2
+        if (b==0) {
+            alert('A là số chẵn')
+        } else {
+            alert('A là số lẻ')
+        }
+    </script> -->
+    <p id ="tong"></p>
+    <script>
+        let n = parseInt(prompt('nhập giá trị n: '));
+        let tong = 0;
+        // for (let i = 1;i<= n; i++)
+        // tong += i;
+        let i = 1;
+        while (i<=n) {
+            tong +=i;
+            i++;
+        }
+        document.getElementById('tong').innerHTML = "Tổng: " +tong;
+    </script>
+</body>
+
+</html>
