@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>nhập cân nặng (Kg)</td>
+                <th><input type="text" id="soA" value=""></th>
+            </tr>
+            <tr>
+                <td>nhập chiều cao (m)</td>
+                <th><input type="text" id="soB" value=""></th>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="check()" value="kiểm tra"></input></td>
+            </tr>
+        </table>
+        <p id="kQ"></p>
+        <p id="nX"></p>
+        <script>
+            function check() {
+                let soA = document.getElementById('soA').value;
+                let soB = document.getElementById('soB').value;
+                soA = parseInt(soA)
+                soB = parseInt(soB)
+                let kQ = soA / (soB ^ 2)
+                let result = "";
+
+                switch (true) {
+                    case kQ < 18.5:
+                        result = document.getElementById('nX').innerHTML = 'bạn thiếu cân';
+                        break;
+                    case kQ >= 18.5 && kQ < 25.0:
+
+                        result = document.getElementById('nX').innerHTML = 'bạn bình thường';
+                        break;
+                    case kQ => 25.0 && kQ < 30.0:
+                        result = document.getElementById('nX').innerHTML = 'bạn thừa cân';
+                        break;
+                    default:
+                        result = document.getElementById('nX').innerHTML = 'bạn béo phì';
+                        break;
+                }
+                // if (kQ < 18.5) {
+                //     document.getElementById('nX').innerHTML ='bạn thiếu cân';
+                // } else if (kQ => 18.5 && kQ < 25.0) {
+                //     document.getElementById('nX').innerHTML ='bạn bình thường';
+                // } else if (kQ=>25.0 && kQ<30.0) {
+                //     document.getElementById('nX').innerHTML ='bạn thừa cân';
+                // } else {
+                //     document.getElementById('nX').innerHTML ='bạn béo phì';
+                // }
+                document.getElementById('kQ').innerHTML ='chỉ số cân nặng của bạn là: ' + kQ;
+            }
+        </script>
+    </form>
+</body>
+
+</html>
