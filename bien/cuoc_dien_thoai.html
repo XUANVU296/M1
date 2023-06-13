@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Số phút gọi:</td>
+                <td><input type="text" id="number1" value=""></td>
+            </tr>
+            <tr>
+                <td>Số SMS:</td>
+                <td><input type="text" id="number2" value=""></td>
+            </tr>
+            <tr>
+                <td> <input type="button" onclick="tinh()" value="Tính"></td>
+            </tr>
+        </table>
+    </form>
+    <p id="tongcuoc"></p>
+    <script>
+        function tinh() {
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+            number1 = parseInt(number1);
+            number2 = parseInt(number2);
+            let tongcuoc = 0;
+            let giagoi = number1 * 690;
+            let giaSMS = number2 * 100;
+            tongcuoc = giagoi + giaSMS;
+            document.getElementById('tongcuoc').innerHTML = 'Tổng cước điện thoại của bạn là: ' + tongcuoc + 'VND';
+        }
+    </script>
+</body>
+
+</html>
