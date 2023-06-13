@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <tr>
+            <td>Nhập doanh số:</td>
+            <td><input type="text" id="number" value=""></td>
+            <td><input type="button" onclick="tinh()" value="Tính"></td>
+        </tr>
+    </form>
+    <p id="hoahong"></p>
+    <script>
+        function tinh() {
+            let number = document.getElementById('number').value;
+            let hoahong = 0
+            switch (true) {
+                case number <= 100:
+                    hoahong = number * 0.1
+                    document.getElementById('hoahong').innerHTML = 'Hoa hồng nhận được là: ' + hoahong;
+                    break;
+                case 100 < number <= 250:
+                    hoahong = number * 0.15
+                    document.getElementById('hoahong').innerHTML = 'Hoa hồng nhận được là: ' + hoahong;
+                    break;
+                case 250 < number <= 500:
+                    hoahong = number * 0.2
+                    document.getElementById('hoahong').innerHTML = 'Hoa hồng nhận được là: ' + hoahong;
+                    break;
+                default:
+                    hoahong = number * 0.3
+                    document.getElementById('hoahong').innerHTML = 'Hoa hồng nhận được là: ' + hoahong;
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
