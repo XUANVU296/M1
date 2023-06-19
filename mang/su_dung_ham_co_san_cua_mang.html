@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau
+    <script>
+        let myColor =['Red','Green','White','Black'];
+        console.log(myColor.join());
+    </script>
+    Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn
+    <script>
+        let num = parseInt(prompt());
+        let str = num.toString();
+        let result = [str[0]];
+        for (let i = 1; i < str.length; i++) {
+            if ((str[i - 1] % 2 == 0) && (str[i] % 2 == 0)) {
+                result.push('-', str[i]);
+            }
+            else {
+                result.push(str[i]);
+            }
+        }
+        console.log(result.join());
+    </script>
+    Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+    <script>
+        let nhap = prompt('nhập kí tự');
+        let letter = nhap.toString();
+        let Lower = 'abcdefghijklmnopqrstuvxyz';
+        let Upper = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
+        let thuong = [];
+        let hoa = [];
+        let results = [letter[0]];
+        for (let i = 1; i < letter.length; i++) {
+            if (Lower.indexOf(i)) {
+                thuong.push(letter[i]);
+            } else if (Upper.indexOf(i)) {
+                hoa.push(letter[i]);
+            }
+            results.push(letter[i]);
+        }
+        console.log(results.join());
+        console.log(thuong);
+        console.log(hoa);
+    </script>
+</body>
+
+</html>

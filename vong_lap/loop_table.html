@@ -25,11 +25,11 @@
     </table>
     <script>
         let str = '<table border="1">';
-        for (let h = 2; h <= 9; h++) {
+        for (let h = 1; h <= 10; h++) {
             str += '</tr>';
-            for (let c = 1; c <= 10; c++) {
+            for (let c = 2; c <= 9; c++) {
                 str += '<td>';
-                str += h +'x' + c +'=' +(h*c);
+                str += c +'x' + h +'=' +(h*c);
                 str += '</td>';
             }
             str += '</tr>';
