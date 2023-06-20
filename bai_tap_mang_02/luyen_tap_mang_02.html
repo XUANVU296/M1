@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bài 1:
+    <script>
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let h = 0; h <= 5; h++) {
+            for (let c = 0; c <= 3; c++) {
+                console.log(a[h][c]);
+            }
+        }
+    </script>
+    Bài 2: 
+    <script>
+        let b = [ 'c', 's', 'c', '2', '6', '1' ];
+        console.log(b.reverse());
+    </script>
+    Bài 3:
+    <script>
+        let array = [ 'u', 's', 'b', '2', '0', '2' ];
+        let j = 0;
+        for ( let i =0;i<array.length; i++ ) {
+            if ( !isNaN(array[i])) {
+                j++;
+            }
+        }
+        document.write('Ký tự số có trong mảng là: ' + j);
+    </script>
+    Bài 4:
+    <script>
+        let chuoi = prompt('nhập chuỗi: ');
+        let i = 0;
+        let works = chuoi.split(" ");
+        while (i < chuoi.length) {
+            i++;
+        }
+        document.write('Số từ có trong chuỗi là: ' + i);
+    </script>
+    Bài 5: 
+    <script>
+        let chuoi1 = prompt('Nhập chuỗi 1: ');
+        let chuoi2 = prompt('Nhập chuỗi 2: ');
+        (chuoi1 === chuoi2) ? alert('Hai chuỗi giống nhau') : alert('Hai chuỗi không giống nhau');
+    </script>
+    Bài 6: 
+    <script>
+        let kitu = prompt('Nhập kí tự: ');
+        console.log('Mảng gốc: ' + kitu);
+        let mangs = kitu.split('');
+        for (let i = 0; i < mangs.length; i++) {
+            if (mangs[i] == "-") {
+                mangs[i] = "_";
+            }
+        }
+        let mangmoi = mangs.join();
+        console.log('Mảng sau khi thay thế là: ' + mangmoi);
+    </script>
+</body>
+
+</html>
