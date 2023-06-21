@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bài 1:
+    <script>
+        function alertMessage() {
+            alert('Xin chào');
+        }
+        alertMessage()
+    </script>
+    Bài 2:
+    <script>
+        function number(c) {
+            c++;
+            alert(c);
+        }
+        let num = parseInt(prompt('Nhập số: '));
+        number(num);
+    </script>
+    Bài 3:
+    <script>
+        function xu_li(a, b) {
+            if (a > b) {
+                alert(a + ' lớn hơn ' + b);
+            } else if (a <= b) {
+                alert('Tổng hai số là: ' + (a + b));
+            }
+        }
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        xu_li(a, b);
+    </script>
+    Bài 4: 
+    <script>
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            alert(result);
+            return result;
+        }
+        result = 0;
+        result = addNumbers(); 
+    </script>
+    Bài 5:
+    <script>
+        function findConstellation(starName) {
+            for (let i = 0; i < stars.length; i++) {
+                if (stars[i] === starName) {
+                    return constellations[i];
+                }
+            }
+            return null;
+        }
+
+        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellations = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+        let starName = prompt('Nhập tên ngôi sao:');
+        let constellationName = findConstellation(starName);
+
+        if (constellationName) {
+            document.write(`Ngôi sao ${starName} thuộc chòm sao ${constellationName}.`);
+        } else {
+            document.write(`Không tìm thấy ngôi sao có tên là ${starName}.`);
+        }
+    </script>
+</body>
+
+</html>
