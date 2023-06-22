@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Bài 1:
+    <script>
+        function tinh(a) {
+            let result = a ** 2;
+            document.write('Bình phương của ' + a + ' là: ' + result);
+        }
+        let a = parseInt(prompt('Vui lòng nhập vào đây: '));
+        tinh(a);
+    </script>
+    Bài 2:
+    <script>
+        function dien_tich(x) {
+            let S = Math.PI * x ** 2;
+            document.write('Diện tích hình tròn là: ' + S.toFixed(2) + '<br>');
+        }
+        function chu_vi(x) {
+            let C = 2 * Math.PI * x;
+            document.write('Chu vi hình tròn là: ' + C.toFixed(2));
+        }
+        let x = prompt('Nhập bán kính: ');
+        dien_tich(x);
+        chu_vi(x);
+    </script>
+    Bài 3: 
+    <script>
+        function giai_thua(soA) {
+            for (let i = 1; i <= k; i++) {
+                kQ *= i;
+            }
+            document.write('Giai thừa của ' + soA + ' là ' + kQ);
+        }
+        let k = prompt('Nhập vào đây: ');
+        let kQ = 1;
+        giai_thua(k);
+    </script>
+    Bài 4:
+    <script>
+        function kiem_tra(x) {
+            (isNaN(parseInt(x)) != true) ? alert(x + ' là kí tự số') : alert(x + ' không phải là kí tự số');
+        }
+        let ki_tu = prompt('Nhập kí tự: ');
+        kiem_tra(ki_tu);
+    </script>
+    Bài 5:
+    <script>
+        function gt_nho_nhat(a, b, c) {
+            let min = null;
+            switch (true) {
+                case a < b && a < c:
+                    min = a;
+                    break;
+                case b < a && b < c:
+                    min = b;
+                    break;
+                default:
+                    min = c;
+                    break;
+            }
+            return min;
+        }
+        let A = parseInt(prompt('Nhập A: '));
+        let B = parseInt(prompt('Nhập B: '));
+        let C = parseInt(prompt('Nhập C: '));
+        document.write(gt_nho_nhat(A, B, C));
+    </script>
+    Bài 6:
+    <script>
+        function kiemtra(so) {
+            (so > 0) ? document.write(so + ' là số nguyên dương') : document.write(so + ' không phải là số nguyên dương');
+        }
+        let So = parseInt(prompt('Vui lòng nhập vào đây: '));
+        kiemtra(So);
+    </script>
+    Bài 7: 
+    <script>
+        function doi_cho(m, n) {
+            let temp;
+            temp = m;
+            m = n;
+            n = temp;
+            document.write('M = ' + m + '<br>');
+            document.write('N = ' + n);
+        }
+        let M = parseInt(prompt('Nhập vào M: '));
+        let N = parseInt(prompt('Nhập vào N: '));
+        doi_cho(M, N);
+    </script>
+    Bài 8:
+    <script>
+        function dao_nguoc(mang) {
+            mang.reverse();
+            console.log(mang);
+        }
+        let Mang = ['1','2','3','4','5','6','7','8','9']
+        dao_nguoc(Mang);
+    </script>
+    Bài 9:
+    <script>
+        function ktra(arr, f) {
+            let result = false;
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (arr[i] === f) {
+                    result = true;
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return count;
+            } else {
+                return -1;
+            }
+        }
+        let array = ['Nhà', 'cung', 'cấp', 'cung', 'chơi'];
+        let f = prompt('Nhập vào đây: ');//cung
+        console.log(ktra(array, f));
+    </script>
+</body>
+</html>
