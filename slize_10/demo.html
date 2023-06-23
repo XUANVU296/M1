@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let vu = {
+            tên: 'Vũ',
+            tuổi: 21,
+            màu_tóc: 'Đen',
+            diachi: 'Gio Linh',
+            hoc: function (mon_hoc) {
+                console.log('tôi đang học: ' + mon_hoc);
+            },
+            the_thao: function () {
+                console.log('chơi thể thao')
+            },
+            an_nhau: function () {
+                console.log('ăn nhậu');
+            },
+            gioi_thieu: function () {
+                console.log('Xin chào các bạn! ');
+                console.log('Tôi tên là: ' + this.tên);
+                console.log('Năm nay tôi ' + this.tuổi + ' tuổi');
+                console.log('Tóc tôi màu ' + this.màu_tóc);
+                console.log('Tôi có những hoạt động sau: ');
+                this.hoc('java')
+                this.the_thao();
+                this.an_nhau();
+            }
+        }
+        console.log(vu);
+        console.log(vu.tên);
+        console.log(vu.tuổi);
+        vu.hoc()
+        vu.the_thao()
+        vu.an_nhau()
+        vu.gioi_thieu()
+
+    </script>
+</body>
+
+</html>
