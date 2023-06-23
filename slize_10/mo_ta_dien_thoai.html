@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor() {
+                this.battery = 100; // Trạng thái pin tính bằng đơn vị số nguyên (tối đa 100 đv)
+                this.draft = ''; // Vùng nhớ dùng để lưu tin nhắn đang soạn thảo
+                this.inbox = []; // Vùng nhớ dùng để lưu tin nhắn trong hộp thư đến
+                this.sent = []; // Vùng nhớ dùng để lưu tin nhắn đã gửi
+                this.status = false; // Trạng thái điện thoại bật hay tắt
+            }
+            // Phương thức kiểm tra trạng thái điện thoại
+            getStatus() {
+                return this.status;
+            }
+            // Phương thức bật điện thoại
+            turnOn() {
+                this.status = true;
+                alert('Điện thoại đã được bật.');
+            }
+            // Phương thức tắt điện thoại
+            turnOff() {
+                this.status = false;
+                alert('Điện thoại đã được tắt.');
+            }
+            // Phương thức xạc pin
+            chargeBattery() {
+                this.battery = 100;
+                alert('Pin đã được sạc đầy.');
+            }
+            // Phương thức soạn tin nhắn
+            writeDraft(text) {
+                if (this.status) {
+                    this.draft = text;
+                    this.battery--;
+                    alert('Tin nhắn đã được soạn thành công.');
+                } else {
+                    alert('Điện thoại đang tắt, vui lòng bật điện thoại để sử dụng chức năng này.');
+                }
+            }
+            // Phương thức nhận tin nhắn
+            receiveMessage(message) {
+                if (this.status) {
+                    this.inbox.push(message);
+                    this.battery--;
+                    alert('Tin nhắn mới đã được nhận thành công.');
+                } else {
+                    alert('Điện thoại đang tắt, vui lòng bật điện thoại để sử dụng chức năng này.');
+                }
+            }
+            // Phương thức gửi tin nhắn
+            sendMessage(receiver, message) {
+                if (this.status) {
+                    receiver.receiveMessage(message);
+                    this.sent.push(message);
+                    this.battery--;
+                    alert('Tin nhắn đã được gửi thành công.');
+                } else {
+                    alert('Điện thoại đang tắt, vui lòng bật điện thoại để sử dụng chức năng này.');
+                }
+            }
+            // Phương thức xem tin trong hộp thư đến
+            viewInbox() {
+                if (this.status) {
+                    let messageList = this.inbox.join('\n');
+                    alert(`Hộp thư đến:\n${messageList}`);
+                    this.battery--;
+                } else {
+                    alert('Điện thoại đang tắt, vui lòng bật điện thoại để sử dụng chức năng này.');
+                }
+            }
+            // Phương thức xem tin đã gửi
+            viewSent() {
+                if (this.status) {
+                    let messageList = this.sent.join('\n');
+                    alert(`Tin nhắn đã gửi:\n${messageList}`);
+                    this.battery--;
+                } else {
+                    alert('Điện thoại đang tắt, vui lòng bật điện thoại để sử dụng chức năng này.');
+                }
+            }
+        }
+        let nokia = new Mobile();
+        let iphone = new Mobile();
+        // Nokia soạn và gửi tin nhắn cho iPhone
+        nokia.writeDraft('Chào bạn, có tôi nhờ bạn mượn chiếc iPhone được không?');
+        nokia.sendMessage(iphone, nokia.draft);
+        // iPhone kiểm tra hộp thư đến và hiển thị tin nhắn
+        iphone.viewInbox();
+    </script>
+</body>
+
+</html>
