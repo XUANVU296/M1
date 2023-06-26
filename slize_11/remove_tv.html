@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let remove = function() {
+            this.ma = '';
+            this.setChuyen_kenh = function(chuyen_kenh) {
+                this.chuyen_kenh = chuyen_kenh
+            }
+            this.getChuyen_kenh = function() {
+                return this.chuyen_kenh
+            }
+            this.setAm_luong = function(am_luong) {
+                this.am_luong = am_luong
+            }
+            this.getAm_luong = function() {
+                return this.am_luong
+            }
+        }
+        let tivi = function() {
+            this.kenh_dang_phat = 0;
+            this.am_luong_hien_thoi = 0;
+            this.trang_thai = false;
+            this.setChuyen_kenh = function(chuyen_kenh) {
+                this.chuyen_kenh = chuyen_kenh
+            }
+            this.getChuyen_kenh = function() {
+                return this.chuyen_kenh
+            }
+            this.setAm_luong = function(am_luong) {
+                this.am_luong = am_luong
+            }
+            this.getAm_luong = function() {
+                return this.am_luong
+            }
+        }
+        class TV {
+            constructor(samsung,china) {
+                this.samsung = samsung;
+                this.china = china;
+                this.kenh_dang_phat = 0;
+                this.bat_tat = false;
+            }
+            turnOn() {
+                this.bat_tat = true;
+            }
+            turnOff() {
+                this.bat_tat = false;
+            }
+            chuyen_kenh(chuyen) {
+                this.kenh_dang_phat = chuyen;
+                console.log(`Chuyển đổi sang kênh ${chuyen}`);
+            }
+        }
+        let myTV = new TV('samsung','china');
+        console.log(`samsung: ${myTV.samsung}`);
+        console.log(`china: ${myTV.china}`);
+        console.log(`kenh_dang_phat: ${myTV.kenh_dang_phat}`);
+        console.log(`bat_tat: ${myTV.bat_tat}`);
+        myTV.turnOn();
+        myTV.chuyen_kenh(3);
+        console.log(`samsung: ${myTV.samsung}`);
+        console.log(`china: ${myTV.china}`);
+        console.log(`kenh_dang_phat: ${myTV.kenh_dang_phat}`);
+        console.log(`bat_tat; ${myTV.bat_tat}`);
+    </script>
+</body>
+</html>
