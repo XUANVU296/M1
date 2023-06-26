@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myDate = function (ngay, thang, nam) {
+            this.ngay = 0;
+            this.thang = 0;
+            this.nam = 0;
+            this.setNgay = function (ngay) {
+                this.ngay = ngay
+            }
+            this.getNgay = function () {
+                return this.ngay
+            }
+            this.setThang = function (thang) {
+                this.thang = thang
+            }
+            this.getThang = function () {
+                return this.thang
+            }
+            this.setNam = function (nam) {
+                this.nam = nam
+            }
+            this.getNam = function () {
+                return this.nam
+            }
+            this.toString = function() {
+                return this.ngay + '/' + this.thang + '/' + this.nam
+            }
+        }
+        let object = new myDate('ngay','thang','nam');
+        object.setNgay('29');
+        object.setThang('6');
+        object.setNam('2002');
+        console.log(object.getNgay());
+        console.log(object.getThang());
+        console.log(object.getNam());
+        console.log(object.toString());
+        console.log(object);
+    </script>
+</body>
+
+</html>
