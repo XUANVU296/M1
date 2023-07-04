@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Example</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="350" height="200"></canvas>
+    <script>
+        class Circle {
+            constructor(x, y, radius, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+            }
+            render(canvas) {
+                const ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        const canvas = document.getElementById('canvas');
+        const circle = new Circle(175, 100, 50, 'red');
+        circle.render(canvas);
+    </script>
+</body>
+</html>
