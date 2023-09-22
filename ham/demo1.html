@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html {
+            background-color: darkgray;
+            color: aqua;
+            font-family: Lucida;
+            font-size: 111px;
+            text-align: center;
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function tong(a, b) {
+            let sum = a + b;
+            return sum;
+        }
+        let a = parseFloat(prompt('Nhập a:'));
+        let b = parseFloat(prompt('Nhập b:'));
+        document.write(tong(a, b));
+    </script> -->
+
+
+
+
+    <!-- <script>
+        function trungbinh(numbers) {
+            let sum = 0;
+            for (let i = 1; i <= numbers; i++) {
+                sum += i;
+            }
+            let average = sum / numbers;
+            return average;
+        }
+        let numbers = parseFloat(prompt('Nhập vào đây: '));
+        document.write(trungbinh(numbers));
+    </script> -->
+
+
+
+
+
+    <script>
+        function chuyen_doi(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        function chuoi_moi(input) {
+            let words = input.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = chuyen_doi(words[i]);
+            }
+            return words.join(" ");
+        }
+        let input = prompt('Nhập vào đây:');
+        document.write(chuoi_moi(input));
+    </script>
+</body>
+
+</html>

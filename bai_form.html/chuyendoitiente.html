@@ -43,8 +43,8 @@
                 let kQ
                 if (tu == 'VND' && den == 'USD') {
                     kQ = "kQ:" + (money * 23000)+" USD"
-                } else {
-                    kQ = "kQ:"(money / 23000)+" VND"
+                } else if(tu == 'USD' && den == 'VND'){
+                    kQ = "kQ:" + (money / 23000)+" VND"
                 }
                 document.write(kQ)
             }

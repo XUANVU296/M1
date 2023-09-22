@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //thêm phần tử vào cuối mảng
+        array.push(0);
+        //xóa phần tử ở cuối mảng
+        array.pop();
+        //thêm phần tử vào đầu mảng
+        array.unshift(0);
+        //đảo ngược các phần tử trong mảng
+        array.reverse();
+        // //xóa phần tử ở đầu mảng
+        array.shift();
+        // //in ra kết quả
+        array.splice(5,1,11);
+        array.splice(4,1,12);
+        array.splice(0,4,13);
+        array.splice(4,3,10);
+        let ham_ss = (a, b) => a - b;
+        array.sort(ham_ss)
+        console.log(array);
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "khoahoc1",
+			"path": ".."
+		},
+		{
+			"name": "khoahoc2",
+			"path": "..\\..\\khoahoc2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "khoahoc1"
+	}
+}
